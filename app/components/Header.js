@@ -37,10 +37,10 @@ const Header = () => {
           <Link href="/destinations/moon">
             <span className="font-bold mr-3">01</span>Destination
           </Link>
-          <Link href="/">
+          <Link href="/crew/commander">
             <span className="font-bold mr-3">02</span>Crew
           </Link>
-          <Link href="/">
+          <Link href="/technology/launch-vehicle">
             <span className="font-bold mr-3">03</span>Technology
           </Link>
         </div>

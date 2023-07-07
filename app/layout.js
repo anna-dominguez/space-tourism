@@ -33,7 +33,9 @@ const RootLayout = ({ children }) => {
       <body
         className={`${barlow.variable} ${bellefair.variable} ${
           defineBg === "" && "home"
-        } ${defineBg === "destinations" && "destinations"} bg-cover`}
+        } ${defineBg === "destinations" && "destinations"}
+        ${defineBg === "crew" && "crew"}
+        ${defineBg === "technology" && "technology"}`}
       >
         <div className="flex flex-col m-6 h-full">
           <Header />
