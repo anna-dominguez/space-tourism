@@ -19,13 +19,37 @@ const DestinationsLayout = () => {
           <span className="font-bold text-white/25">01</span> PICK YOUR
           DESTINATION
         </p>
-        {destination === "moon" && <Image className="w-[50%]" src={ImgMoon} />}
-        {destination === "mars" && <Image className="w-[50%]" src={ImgMars} />}
+        {destination === "moon" && (
+          <Image
+            placeholder="blur"
+            alt="Moon picture"
+            className="w-[50%]"
+            src={ImgMoon}
+          />
+        )}
+        {destination === "mars" && (
+          <Image
+            placeholder="blur"
+            alt="Mars picture"
+            className="w-[50%]"
+            src={ImgMars}
+          />
+        )}
         {destination === "europa" && (
-          <Image className="w-[50%]" src={ImgEuropa} />
+          <Image
+            placeholder="blur"
+            alt="Europa picture"
+            className="w-[50%]"
+            src={ImgEuropa}
+          />
         )}
         {destination === "titan" && (
-          <Image className="w-[50%]" src={ImgTitan} />
+          <Image
+            placeholder="blur"
+            alt="Titan picture"
+            className="w-[50%]"
+            src={ImgTitan}
+          />
         )}
         <div className="barlow w-[50%] flex space-x-8 uppercase tracking-[2.362px] justify-center">
           <Link
