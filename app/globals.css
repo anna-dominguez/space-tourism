@@ -2,26 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.bellefair {
+  font-family: var(--bellefair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.barlow {
+  font-family: var(--barlow);
+}
+
+@layer base {
+  body {
+    @apply w-screen h-screen text-white;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .menu {
+    @apply flex flex-col space-y-8 w-full md:flex-row uppercase;
+  }
+  .spacing {
+    @apply tracking-[2.7px];
+  }
+  .other-destination {
+    @apply hover:border-b-[3px] hover:border-white/50 text-blue;
+  }
+  .home {
+    @apply bg-[url('/images/home/background-home-mobile.jpg')] md:bg-[url('/images/home/background-home-tablet.jpg')] lg:bg-[url('/images/home/background-home-desktop.jpg')] bg-cover;
+  }
+  .destinations {
+    @apply bg-[url('/images/destination/background-destination-mobile.jpg')] md:bg-[url('/images/destination/background-destination-tablet.jpg')] lg:bg-[url('/images/destination/background-destination-desktop.jpg')] bg-cover;
+  }
 }
