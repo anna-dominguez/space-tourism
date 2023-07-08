@@ -1,5 +1,3 @@
-const Commander = () => {
-  return <></>
-}
+const Commander = () => <></>
 
 export default Commander

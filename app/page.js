@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const Home = () => {
   return (
-    <div className="flex flex-col h-full place-items-center justify-between mt-12">
+    <div className="px-6 flex flex-col h-full place-items-center justify-between mt-12">
       <div className="flex flex-col gap-4 place-items-center text-center">
         <p className="barlow text-blue tracking-[2.7px]">
           SO, YOU WANT TO TRAVEL TO

@@ -13,7 +13,7 @@ const DestinationsLayout = () => {
   const destination = pathname.split("/")[2]
 
   return (
-    <div className="w-full flex flex-col mt-6 items-center">
+    <div className="w-full p-6 flex flex-col mt-6 items-center">
       <div className="w-full flex flex-col space-y-8 items-center">
         <p className="barlow spacing">
           <span className="font-bold text-white/25">01</span> PICK YOUR
@@ -107,18 +107,28 @@ const DestinationsLayout = () => {
           Titan is a home away from home (just a few hundred degrees colder!).\
            As a bonus, you get striking views of the Rings of Saturn."}
       </p>
-      <div className="w-full border-t border-blue flex flex-col gap-8 items-center p-8">
+      <div className="w-full border-t border-blue/50 flex flex-col gap-8 items-center p-8">
         <div className="flex flex-col gap-3 items-center">
           <h3 className="barlow uppercase tracking-[2.362px] justify-center text-blue">
             AVG. DISTANCE
           </h3>
-          <p className="bellefair text-heading5">1.6 BIL. KM</p>
+          <p className="bellefair text-heading5">
+            {destination === "moon" && "384,400 KM"}
+            {destination === "mars" && "225 MIL. KM"}
+            {destination === "europa" && "628 MIL. KM"}
+            {destination === "titan" && "1.6 BIL. KM"}
+          </p>
         </div>
         <div className="flex flex-col gap-3 items-center">
           <h3 className="barlow uppercase tracking-[2.362px] justify-center text-blue">
             EST. TRAVEL TIME
           </h3>
-          <p className="bellefair text-heading5">7 YEARS</p>
+          <p className="bellefair text-heading5">
+            {destination === "moon" && "3 DAYS"}
+            {destination === "mars" && "9 MONTHS"}
+            {destination === "europa" && "3 YEARS"}
+            {destination === "titan" && "7 YEARS"}
+          </p>
         </div>
       </div>
     </div>

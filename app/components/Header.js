@@ -12,7 +12,7 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false)
 
   return (
-    <div className="flex justify-between items-center w-full">
+    <div className="px-6 pt-6 z-50 flex justify-between items-center w-full">
       <Image className=" w-10" src={Logo} />
       <Image
         className={`${openMenu && "hidden"} w-6 after:cursor-pointer md:hidden`}

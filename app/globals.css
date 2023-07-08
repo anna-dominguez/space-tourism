@@ -15,7 +15,7 @@
     @apply w-screen h-screen text-white;
   }
   .menu {
-    @apply flex flex-col space-y-8 w-full md:flex-row uppercase;
+    @apply flex flex-col m-6 pl-8 space-y-8 w-full md:flex-row uppercase;
   }
   .spacing {
     @apply tracking-[2.7px];

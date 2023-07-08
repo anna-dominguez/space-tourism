@@ -37,7 +37,7 @@ const RootLayout = ({ children }) => {
         ${defineBg === "crew" && "crew"}
         ${defineBg === "technology" && "technology"}`}
       >
-        <div className="flex flex-col m-6 h-full">
+        <div className="flex flex-col h-full">
           <Header />
           <main>{children}</main>
         </div>
