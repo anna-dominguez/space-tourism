@@ -14,8 +14,8 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false)
 
   return (
-    <div className="px-6 lg:mt-8 md:px-0 pt-6 md:pt-0 z-50 flex justify-between items-center w-full">
-      <Image className="w-10 md:w-12 md:ml-10 md:mt-6" src={Logo} />
+    <div className="px-6 lg:mt-9 md:px-0 pt-6 md:pt-0z-50 flex justify-between items-center w-full">
+      <Image className="w-10 md:w-12 md:ml-10 md:mt-6 lg:ml-14" src={Logo} />
       <Image
         className={`${openMenu && "hidden"} w-6 after:cursor-pointer md:hidden`}
         onClick={() => setOpenMenu(!openMenu)}
