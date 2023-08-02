@@ -1,5 +1,5 @@
 "use client"
-
+import { usePathname } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -9,6 +9,8 @@ import IconClose from "../../public/images/shared/icon-close.svg"
 import { useState } from "react"
 
 const Header = () => {
+  const pathname = usePathname()
+  const activeMenu = pathname.split("/")[1]
   const [openMenu, setOpenMenu] = useState(false)
 
   return (
@@ -31,25 +33,45 @@ const Header = () => {
           src={IconClose}
         />
         <div className="menu spacing barlow text-nav md:text-navS z-50">
-          <Link className="flex" href="/">
-            <span className="font-bold mr-3 md:mr-0 lg:mr-3 md:hidden lg:block">
+          <Link
+            className={`flex hover:md:border-b-4 hover:md:border-b-white/50 md:py-10 ${
+              activeMenu === "" && "md:border-b-4 md:border-b-white"
+            }`}
+            href="/"
+          >
+            <span className="font-bold  mr-3 md:mr-0 lg:mr-3 md:hidden lg:block">
               00
             </span>
             Home
           </Link>
-          <Link className="flex" href="/destinations/moon">
+          <Link
+            className={`flex hover:md:border-b-4 hover:md:border-b-white/50 md:py-10 ${
+              activeMenu === "destinations" && "md:border-b-4 md:border-b-white"
+            }`}
+            href="/destinations/moon"
+          >
             <span className="font-bold mr-3 md:mr-0 lg:mr-3 md:hidden lg:block">
               01
             </span>
             Destination
           </Link>
-          <Link className="flex" href="/crew/commander">
+          <Link
+            className={`flex hover:md:border-b-4 hover:md:border-b-white/50  md:py-10 ${
+              activeMenu === "crew" && "md:border-b-4 md:border-b-white"
+            }`}
+            href="/crew/commander"
+          >
             <span className="font-bold mr-3 md:mr-0 lg:mr-3 md:hidden lg:block">
               02
             </span>
             Crew
           </Link>
-          <Link className="flex" href="/technology/launch-vehicle">
+          <Link
+            className={`flex hover:md:border-b-4 hover:md:border-b-white/50  md:py-10 ${
+              activeMenu === "technology" && "md:border-b-4 md:border-b-white"
+            }`}
+            href="/technology/launch-vehicle"
+          >
             <span className="font-bold mr-3 md:mr- lg:mr-3 md:hidden lg:block">
               03
             </span>
