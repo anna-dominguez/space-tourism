@@ -12,8 +12,8 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false)
 
   return (
-    <div className="px-6 pt-6 z-50 flex justify-between items-center w-full">
-      <Image className=" w-10" src={Logo} />
+    <div className="px-6 lg:mt-8 md:px-0 pt-6 md:pt-0 z-50 flex justify-between items-center w-full">
+      <Image className="w-10 md:w-12 md:ml-10 md:mt-6" src={Logo} />
       <Image
         className={`${openMenu && "hidden"} w-6 after:cursor-pointer md:hidden`}
         onClick={() => setOpenMenu(!openMenu)}
@@ -23,25 +23,37 @@ const Header = () => {
         className={`${
           !openMenu ? "hidden" : "flex"
         } bg-[rgba(255,255,255,0.04)] backdrop-blur-2xl
-         h-full flex-col items-end p-6 pt-8 right-0 top-0 w-[65%] max-sm:absolute md:w-fit md:flex md:flex-row `}
+         h-full flex-col items-end p-6 md:p-0 pt-8 right-0 top-0 w-[65%] max-sm:absolute md:w-fit md:flex md:flex-row `}
       >
         <Image
           onClick={() => setOpenMenu(!openMenu)}
           className={`${!openMenu && "hidden"} w-[19px] md:hidden pb-16`}
           src={IconClose}
         />
-        <div className="menu spacing barlow text-nav z-50">
-          <Link href="/">
-            <span className="font-bold mr-3">00</span>Home
+        <div className="menu spacing barlow text-nav md:text-navS z-50">
+          <Link className="flex" href="/">
+            <span className="font-bold mr-3 md:mr-0 lg:mr-3 md:hidden lg:block">
+              00
+            </span>
+            Home
           </Link>
-          <Link href="/destinations/moon">
-            <span className="font-bold mr-3">01</span>Destination
+          <Link className="flex" href="/destinations/moon">
+            <span className="font-bold mr-3 md:mr-0 lg:mr-3 md:hidden lg:block">
+              01
+            </span>
+            Destination
           </Link>
-          <Link href="/crew/commander">
-            <span className="font-bold mr-3">02</span>Crew
+          <Link className="flex" href="/crew/commander">
+            <span className="font-bold mr-3 md:mr-0 lg:mr-3 md:hidden lg:block">
+              02
+            </span>
+            Crew
           </Link>
-          <Link href="/technology/launch-vehicle">
-            <span className="font-bold mr-3">03</span>Technology
+          <Link className="flex" href="/technology/launch-vehicle">
+            <span className="font-bold mr-3 md:mr- lg:mr-3 md:hidden lg:block">
+              03
+            </span>
+            Technology
           </Link>
         </div>
       </div>

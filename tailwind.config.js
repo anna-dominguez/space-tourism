@@ -14,7 +14,10 @@ module.exports = {
       heading5: "28px",
       subhead: "14px",
       nav: "16px",
+      navS: "14px",
+      bodyM: "20px",
       body: "18px",
+      bodyS: ["15px", "25px"],
     },
     colors: {
       black: "#0B0D17",
